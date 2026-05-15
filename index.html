@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diptee Kunwar | SEO Specialist Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfaf5;
+            --border: #1e1e1e;
+            --pastel-pink: #ffd6e0;
+            --pastel-blue: #c1e7ff;
+            --pastel-purple: #e2d1f9;
+            --pastel-green: #d1f2eb;
+            --text: #1e1e1e;
+            --shadow: 4px 4px 0px #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--border);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 80px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: var(--pastel-pink);
+            border-bottom: 3px solid var(--border);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 0.9;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .badge {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 2px 2px 0px var(--border);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* --- Global Grid Layout --- */
+        .container {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-decoration: underline;
+        }
+
+        /* --- Skills & Tools --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border: 3px solid var(--border);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px var(--border);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .tag.blue { background: var(--pastel-blue); }
+        .tag.purple { background: var(--pastel-purple); }
+        .tag.green { background: var(--pastel-green); }
+
+        /* --- Projects --- */
+        .project-card {
+            background: white;
+            border: 3px solid var(--border);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        /* --- Contact/Footer --- */
+        footer {
+            background: var(--border);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .btn {
+            background: var(--pastel-green);
+            border: 3px solid var(--border);
+            padding: 15px 30px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text);
+            display: inline-block;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s all ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DK.SEO</div>
+        <div>
+            <span style="font-weight: 600;">Pokhara, Nepal</span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">BIM Graduate & SEO Strategist</div>
+        <h1>DIPTEE KUNWAR</h1>
+        <p>Creative and results-driven SEO specialist focused on driving organic traffic and combining user experience with data-driven strategies.</p>
+        <a href="mailto:deeptikunwar6@gmail.com" class="btn">Work With Me</a>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="grid">
+            <div class="card reveal" style="background: var(--pastel-blue);">
+                <h3>SEO Skills</h3>
+                <ul style="list-style: none;">
+                    <li>🎯 Keyword Research & Strategy</li>
+                    <li>🛠 On-Page & Technical SEO</li>
+                    <li>🔗 Backlink & Outreach Strategies</li>
+                    <li>📱 Mobile Optimization</li>
+                </ul>
+            </div>
+            <div class="card reveal" style="background: var(--pastel-purple);">
+                <h3>Education</h3>
+                <p><strong>Bachelor in Information Management (BIM)</strong></p>
+                <p>Tribhuvan University (2021 – 2026)</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Specializing in Digital Marketing, Web Dev, and Wordpress.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="background: #fff;">
+        <h2 class="section-title">Premium Tools I Use</h2>
+        <div class="tag-container reveal">
+            <span class="tag blue">Google Analytics</span>
+            <span class="tag purple">Google Search Console</span>
+            <span class="tag green">Ahrefs</span>
+            <span class="tag blue">SEMrush</span>
+            <span class="tag purple">SpyFu</span>
+            <span class="tag green">Screaming Frog</span>
+            <span class="tag blue">Google Trends</span>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-card reveal">
+            <div class="project-content">
+                <span class="badge" style="background: var(--pastel-green);">Case Study</span>
+                <h3>Pokhara Rent Hub</h3>
+                <p>Room Rental Management System. Optimized website structure and implemented SEO strategies to drastically improve search visibility for local rental listings.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-content">
+                <span class="badge" style="background: var(--pastel-blue);">Analysis</span>
+                <h3>SEO Practice & Audits</h3>
+                <p>Performed full website audits, keyword optimization, and analyzed traffic trends using Google Analytics to boost rankings via content optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Let's Rank Your Website Higher</h2>
+        <p style="margin: 20px 0;">Email: deeptikunwar6@gmail.com | Phone: 9827115423</p>
+        <div class="tag-container" style="justify-content: center; margin-top: 20px;">
+            <a href="https://linkedin.com" style="color: white; text-decoration: none; border: 1px solid white; padding: 5px 15px;">LinkedIn</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6;">© 2024 Diptee Kunwar. Built for SEO Excellence.</p>
+    </footer>
+
+    <script>
+        // Simple Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
