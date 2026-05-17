@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Diptee Kunwar | SEO Specialist</title>
+
+<!-- Elegant Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* ===== BODY ===== */
+body{
+    font-family:'Outfit',sans-serif;
+    background:
+    radial-gradient(circle at top left,#2a2320 0%,#1a1a1a 40%,#111111 100%);
+    color:#FAFAFA;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ===== BACKGROUND GLOW ===== */
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#D8B4A020;
+    filter:blur(140px);
+    top:-180px;
+    left:-100px;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#F5E6E015;
+    filter:blur(140px);
+    bottom:-180px;
+    right:-100px;
+    z-index:-1;
+}
+
+/* ===== PARTICLES ===== */
+.particle{
+    position:absolute;
+    border-radius:50%;
+    background:#D8B4A0;
+    opacity:0.08;
+    animation:float 14s infinite linear;
+}
+
+.particle:nth-child(1){
+    width:120px;
+    height:120px;
+    top:10%;
+    left:5%;
+}
+
+.particle:nth-child(2){
+    width:80px;
+    height:80px;
+    top:70%;
+    left:10%;
+    animation-duration:18s;
+}
+
+.particle:nth-child(3){
+    width:150px;
+    height:150px;
+    top:20%;
+    right:5%;
+    animation-duration:20s;
+}
+
+.particle:nth-child(4){
+    width:90px;
+    height:90px;
+    bottom:10%;
+    right:15%;
+    animation-duration:15s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px) translateX(0px);
+    }
+    50%{
+        transform:translateY(-40px) translateX(20px);
+    }
+    100%{
+        transform:translateY(0px) translateX(0px);
+    }
+}
+
+/* ===== HERO ===== */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 8%;
+    gap:80px;
+    position:relative;
+    z-index:2;
+}
+
+/* ===== HERO TEXT ===== */
+.hero-text{
+    max-width:620px;
+    animation:fadeUp 1s ease;
+}
+
+.hero-text .small{
+    color:#D8B4A0;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:500;
+}
+
+.hero-text h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:86px;
+    line-height:0.95;
+    margin-top:20px;
+    font-weight:700;
+    color:#F8F6F3;
+}
+
+.hero-text h1 span{
+    color:#D8B4A0;
+}
+
+.hero-text h2{
+    margin-top:24px;
+    font-size:30px;
+    color:#E8DED9;
+    min-height:42px;
+    font-weight:400;
+}
+
+.hero-text p{
+    margin-top:28px;
+    line-height:1.9;
+    color:#D1D5DB;
+    font-size:17px;
+    max-width:560px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons{
+    margin-top:42px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 34px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:15px;
+    transition:0.35s;
+    font-family:'Outfit',sans-serif;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary{
+    background:linear-gradient(135deg,#D8B4A0,#C89B87);
+    color:#111111;
+    box-shadow:0 0 25px rgba(216,180,160,0.18);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 35px rgba(216,180,160,0.35);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.12);
+    color:#FAFAFA;
+}
+
+.btn-outline:hover{
+    background:#1e1e1e;
+    border-color:#D8B4A0;
+    transform:translateY(-4px);
+    box-shadow:0 0 25px rgba(216,180,160,0.15);
+}
+
+/* ===== IMAGE ===== */
+.hero-image{
+    position:relative;
+    animation:fadeUp 1.2s ease;
+}
+
+.image-wrap{
+    position:relative;
+    padding:12px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#D8B4A0,#F5E6E0);
+    box-shadow:
+    0 0 40px rgba(216,180,160,0.18);
+}
+
+.image-wrap img{
+    width:360px;
+    height:460px;
+    object-fit:cover;
+    border-radius:32px;
+    display:block;
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:120px 8%;
+    position:relative;
+    z-index:2;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:62px;
+    margin-bottom:75px;
+    font-weight:700;
+    color:#F5F5F5;
+}
+
+.section-title span{
+    color:#D8B4A0;
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
+}
+
+/* ===== CARDS ===== */
+.card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:28px;
+    padding:34px;
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#D8B4A0;
+    box-shadow:0 0 35px rgba(216,180,160,0.12);
+}
+
+.card h3{
+    margin-bottom:16px;
+    color:#F5E6E0;
+    font-size:22px;
+    font-weight:500;
+}
+
+.card p{
+    color:#CFCFCF;
+    line-height:1.9;
+    font-size:15px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#A1A1AA;
+    border-top:1px solid rgba(255,255,255,0.06);
+    font-size:14px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== HERO ANIMATION ===== */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:980px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:100px;
+}
+
+.hero-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:62px;
+}
+
+.hero-text h2{
+    font-size:24px;
+}
+
+.image-wrap img{
+    width:300px;
+    height:390px;
+}
+
+.section-title{
+    font-size:48px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+
+<!-- HERO -->
+<section class="hero">
+
+    <!-- LEFT -->
+    <div class="hero-text">
+
+        <div class="small">
+            SEO SPECIALIST • DIGITAL MARKETER
+        </div>
+
+        <h1>
+            Hi, I’m <br>
+            <span>Diptee Kunwar</span>
+        </h1>
+
+        <h2 id="typing"></h2>
+
+        <p>
+            I help brands grow online through strategic SEO,
+            technical optimization, keyword research,
+            content marketing, and data-driven digital strategies
+            designed to increase rankings, traffic, and conversions.
+        </p>
+
+        <div class="buttons">
+
+            <button class="btn btn-primary"
+            onclick="location.href='mailto:deeptikunwar6@gmail.com'">
+            Hire Me
+            </button>
+
+            <button class="btn btn-outline"
+            onclick="downloadCV()">
+            Download CV
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-image">
+
+        <div class="image-wrap">
+            <img src="image.jpg" alt="Diptee Kunwar">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="section hidden">
+
+    <h2 class="section-title">
+        Core <span>Skills</span>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Technical SEO</h3>
+            <p>
+                Advanced optimization for indexing, crawling,
+                website speed, and performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>On-Page SEO</h3>
+            <p>
+                Improve metadata, content structure,
+                internal linking, and search visibility.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Keyword Research</h3>
+            <p>
+                Discover profitable keywords with strong
+                ranking and conversion opportunities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Content Strategy</h3>
+            <p>
+                Build SEO-focused content strategies
+                designed for sustainable growth.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TOOLS -->
+<section class="section hidden">
+
+    <h2 class="section-title">
+        SEO <span>Tools</span>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card"><h3>Google Analytics</h3></div>
+
+        <div class="card"><h3>Google Search Console</h3></div>
+
+        <div class="card"><h3>Ahrefs</h3></div>
+
+        <div class="card"><h3>SEMrush</h3></div>
+
+        <div class="card"><h3>SpyFu</h3></div>
+
+        <div class="card"><h3>Keyword Tool</h3></div>
+
+        <div class="card"><h3>Screaming Frog</h3></div>
+
+        <div class="card"><h3>Google Trends</h3></div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section hidden">
+
+    <h2 class="section-title">
+        My <span>Services</span>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>SEO Audits</h3>
+            <p>
+                Identify technical issues, SEO gaps,
+                and opportunities for growth.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Technical SEO</h3>
+            <p>
+                Improve crawling, indexing,
+                mobile usability, and speed optimization.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Content Marketing</h3>
+            <p>
+                Create optimized content strategies
+                that drive organic traffic and engagement.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Analytics & Reporting</h3>
+            <p>
+                Track SEO performance through detailed
+                analytics and measurable reporting.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Diptee Kunwar • SEO Specialist
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+/* ===== TYPING EFFECT ===== */
+
+const words = [
+    "SEO Specialist",
+    "Digital Marketer",
+    "Content Strategist"
+];
+
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+
+function type(){
+
+    currentWord = words[i];
+
+    document.getElementById("typing").textContent =
+    currentWord.substring(0, isDeleting ? j-- : j++);
+
+    if(!isDeleting && j === currentWord.length){
+        isDeleting = true;
+        setTimeout(type,1200);
+        return;
+    }
+
+    if(isDeleting && j === 0){
+        isDeleting = false;
+        i = (i + 1) % words.length;
+    }
+
+    setTimeout(type, isDeleting ? 60 : 110);
+}
+
+type();
+
+/* ===== DOWNLOAD CV ===== */
+
+function downloadCV(){
+    window.open("DIPTEE CV.pdf");
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+
+hiddenElements.forEach((el)=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
